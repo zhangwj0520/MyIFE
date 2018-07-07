@@ -1,2 +1,2 @@
 # MyIFE
-[dome](https://github.com/zhangwj0520/MyIFE/tree/master/lesson1/index.html)
+[dome](https://zhangwj0520.github.io/MyIFE/lesson1/index.html)

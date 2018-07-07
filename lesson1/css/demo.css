@@ -24,6 +24,7 @@ li.btn{
     border: 1px solid #000;
     font-size: 25px;
     border-radius: 10px;
+    cursor: default;
 }
 .demo1{
     -webkit-animation-name:wobble;

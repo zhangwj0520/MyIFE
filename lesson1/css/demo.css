@@ -1,0 +1,71 @@
+ul{
+    margin: 50px auto;
+    width: 130px;
+}
+li{
+    list-style: none;
+    display: block;
+    text-align: center;
+}
+li.title{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000;
+}
+li.line{
+    background: blue;
+    height: 2px;
+    width:  0;
+    margin: 50px auto;
+}
+li.btn{
+    width: 120px;
+    height: 35px;
+    border: 1px solid #000;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.demo1{
+    -webkit-animation-name:wobble;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+
+}
+@-webkit-keyframes wobble{
+    0%{
+        width:  0;
+    }
+    30%{
+        width:  130px
+    }
+    70%{
+        width:  130px;
+    }
+    100%{
+        width:  0;
+    }
+}
+.demo2{
+    -webkit-animation-name:col;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    /*-webkit-animation-delay: 0s;*/
+    -webkit-animation-iteration-count: 1;
+
+}
+@-webkit-keyframes col{
+
+    0%{
+        color: #000;
+    }
+    30%{
+        color: #00F;
+    }
+    70%{
+        color: #00F;
+    }
+    100%{
+        color: #000;
+    }
+}

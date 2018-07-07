@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作一个简单的菜单动画效果</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+<ul>
+    <li class="title">前端学院</li>
+    <li class="line"></li>
+    <li class="btn">切换样式</li>
+</ul>
+<script>
+    var oLis=document.getElementsByTagName("li");
+    console.log(oLis);
+    oLis[2].onclick=function () {
+        oLis[0].classList.add("demo2");
+        oLis[1].classList.add("demo1");
+        setTimeout(function () {
+            oLis[0].classList.remove("demo2");
+            oLis[1].classList.remove("demo1");
+        },1000)
+    }
+
+</script>
+
+</body>
+</html>
+

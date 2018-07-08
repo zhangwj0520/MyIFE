@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            float: left;
+            width: 56px;
+            height: 64px;
+            border: 2px solid #ebebeb;
+            background-color: #f7f6f6;
+            font-size: 9px;
+            color: #000;
+            text-align: center;
+            line-height: 64px;
+            margin: 27px 18px;
+        }
+
+        .box1{
+            transform:skewX(30deg);
+            /*skewX skewX(<angle>)：以其中心为基点，并在水平方向（X轴）进行扭曲变行。*/
+        }
+        .box2{
+            transform:scaleX(0.5);
+            /*scale  中心点缩放*/
+        }
+        .box3{
+            transform:rotate(45deg);
+            /*正数表示顺时针旋转*/
+        }
+        .box4{
+            transform:translate(10px,20px);
+            /*translate(x,y)水平方向和垂直方向同时移动*/
+        }
+        .box5{
+            transform:skewX(30deg) scale(0.5) rotate(45deg) translate(10px,20px);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="warp">
+    <div class="box">box0</div>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+</div>
+
+
+<script>
+
+</script>
+
+</body>
+</html>

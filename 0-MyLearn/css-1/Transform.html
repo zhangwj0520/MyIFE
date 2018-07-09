@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform</title>
+    <style>
+        .menu ul {
+            border-top: 15px solid black;
+            padding: 0 10px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            float: left;
+            margin: 0 5px;
+            font-size: 14px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            width: 65px;
+            padding: 10px 5px;
+            background: #151515;
+            -moz-border-radius: 0 0 5px 5px;
+            -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+            -moz-box-shadow: 0 0 1px #ccc, inset 0 0 2px #fff;
+            -webkit-box-shadow: 0 0 1px #ccc, inset 0 0 2px #fff;
+            box-shadow: 0 0 1px #ccc, inset 0 0 2px #fff;
+            text-shadow: 0 1px 1px #686868;
+            text-decoration: none;
+        }
+        .hidden{
+            display: none;
+            width: 1000px;
+            position: absolute;
+            top: 300px;
+            color: black;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: left;
+            text-shadow: none;
+
+        }
+
+        .menu ul li.translate a {
+            background: #2EC7D2;
+        }
+
+        .menu ul li.translate-x a {
+            background: #8FDD21;
+        }
+
+        .menu ul li.translate-y a {
+            background: #F45917;
+        }
+
+        .menu ul li.rotate a {
+            background: #D50E19;
+        }
+
+        .menu ul li.scale a {
+            background: #cdddf2;
+        }
+
+        .menu ul li.scale-x a {
+            background: #0fDD21;
+        }
+
+        .menu ul li.scale-y a {
+            background: #cd5917;
+        }
+
+        .menu ul li.skew a {
+            background: #519;
+        }
+
+        .menu ul li.skew-x a {
+            background: #D50;
+        }
+
+        .menu ul li.skew-y a {
+            background: #E19;
+        }
+
+        .menu ul li.matrix a {
+            background: #919;
+        }
+
+        .menu ul li.translate a:hover {
+            -moz-transform: translate(-10px, -10px);
+            -webkit-transform: translate(-10px, -10px);
+            -o-transform: translate(-10px, -10px);
+            -ms-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+        }
+        .menu ul li.translate a:hover .transLate{
+            display: block;
+
+        }
+        .menu ul li.translate-x a:hover {
+            -moz-transform: translateX(-10px);
+            -webkit-transform: translateX(-10px);
+            -o-transform: translateX(-10px);
+            -ms-transform: translateX(-10px);
+            transform: translateX(-10px);
+        }
+        .menu ul li.translate-x a:hover .transLate{
+            display: block;
+        }
+
+        .menu ul li.translate-y a:hover {
+            -moz-transform: translateY(-10px);
+            -webkit-transform: translateY(-10px);
+            -o-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+
+        .menu ul li.rotate a:hover {
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .menu ul li.rotate a:hover .rot{
+            display: block;
+        }
+        .menu ul li.scale a:hover {
+            -moz-transform: scale(0.8, 0.8);
+            -webkit-transform: scale(0.8, 0.8);
+            -o-transform: scale(0.8, 0.8);
+            -ms-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+        }
+        .menu ul li.scale a:hover .sca{
+            display: block;
+        }
+
+        .menu ul li.scale-x a:hover {
+            -moz-transform: scaleX(0.8);
+            -webkit-transform: scaleX(0.8);
+            -o-transform: scaleX(0.8);
+            -ms-transform: scaleX(0.8);
+            transform: scaleX(0.8);
+        }
+
+        .menu ul li.scale-y a:hover {
+            -moz-transform: scaleY(1.2);
+            -webkit-transform: scaleY(1.2);
+            -o-transform: scaleY(1.2);
+            -ms-transform: scaleY(1.2);
+            transform: scaleY(1.2);
+        }
+
+        .menu ul li.skew a:hover {
+            -moz-transform: skew(45deg, 15deg);
+            -webkit-transform: skew(45deg, 15deg);
+            -o-transform: skew(45deg, 15deg);
+            -ms-transform: skew(45deg, 15deg);
+            transform: skew(45deg, 15deg);
+        }
+        .menu ul li.skew a:hover .ske{
+            display: block;
+            transform: skew(-45deg,0);
+        }
+        .menu ul li.skew-x a:hover {
+            -moz-transform: skewX(-30deg);
+            -webkit-transform: skewX(-30deg);
+            -o-transform: skewX(-30deg);
+            -ms-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+        }
+
+        .menu ul li.skew-y a:hover {
+            -moz-transform: skewY(30deg);
+            -webkit-transform: skewY(30deg);
+            -o-transform: skewY(30deg);
+            -ms-transform: skewY(30deg);
+            transform: skewY(30deg);
+        }
+
+        .menu ul li.matrix a:hover {
+            -moz-transform: matrix(1, 1, -1, 0, 0, 0);
+            -webkit-transform: matrix(1, 1, -1, 0, 0, 0);
+            -o-transform: matrix(1, 1, -1, 0, 0, 0);
+            -ms-transform: matrix(1, 1, -1, 0, 0, 0);
+            transform: matrix(1, 1, -1, 0, 0, 0);
+        }
+
+        .menu ul li.transform-origin a {
+            -moz-transform-origin: left top;
+            -webkit-transform-origin: left top;
+            -o-transform-origin: left top;
+            -ms-transform-origin: left top;
+            transform-origin: left top;
+        }
+
+        .demo a {
+            width: 100px;
+            padding: 5px;
+            background: red;
+            display: block;
+        }
+
+        .demo a:hover {
+            -moz-transform: rotate(45deg) scale(0.8, 1.2) skew(60deg, -30deg);
+            -webkit-transform: rotate(45deg) scale(0.8, 1.2) skew(60deg, -30deg);
+            -o-transform: rotate(45deg) scale(0.8, 1.2) skew(60deg, -30deg);
+            -ms-transform: rotate(45deg) scale(0.8, 1.2) skew(60deg, -30deg);
+            transform: rotate(45deg) scale(0.8, 1.2) skew(60deg, -30deg);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="menu">
+    <ul class="clearfix">
+        <li class="item translate"><a href="#">
+            Translate
+            <div class="hidden transLate">
+                <h3>移动translate</h3>
+                <p>
+                    移动translate我们分为三种情况：translate(x,y)水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）；translateX(x)仅水平方向移动（X轴移动）；translateY(Y)仅垂直方向移动（Y轴移动），具体使用方法如下：
+                    <br>
+                    1、translate(translation-value,translation-value]) ：通过矢量[tx, ty]指定一个2D translation，tx 是第一个过渡值参数，ty 是第二个过渡值参数选项。如果 未被提供，则ty以 0
+                    作为其值。也就是translate(x,y),它表示对象进行平移，按照设定的x,y参数值,当值为负数时，反方向移动物体，其基点默认为元素
+                    中心点，也可以根据transform-origin进行改变基点。如transform:translate(100px,20px):
+                    <br>
+                    2、translateX(translation-value) ：
+                    通过给定一个X方向上的数目指定一个translation。只向x轴进行移动元素，同样其基点是元素中心点，也可以根据transform-origin改变基点位置。如：transform:translateX(100px):
+                    <br>
+                    3、translateY(translation-value)
+                    ：通过给定Y方向的数目指定一个translation。只向Y轴进行移动，基点在元素心点，可以通过transform-origin改变基点位置。如：transform:translateY(20px):
+
+                </p>
+            </div>
+        </a></li>
+        <li class="item translate-x"><a href="#">TranslateX</a></li>
+        <li class="item translate-y"><a href="#">TranslateY</a></li>
+        <li class="item rotate"><a href="#">
+            Rotate
+            <div class="hidden rot">
+                rotate(angle) ：通过指定的角度参数对原元素指定一个2D rotation（2D 旋转），需先有transform-origin属性的定义。transform-origin定义的是旋转的基点，其中angle是指旋转角度，如果设置的值为正数表示顺时针旋转，如果设置的值为负数，则表示逆时针旋转。
+            </div>
+        </a></li>
+        <li class="item scale"><a href="#">Scale
+            <div class="hidden sca">
+                缩放scale和移动translate是极其相似，他也具有三种情况：scale(x,y)使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）；scaleX(x)元素仅水平方向缩放（X轴缩放）；scaleY(y)元素仅垂直方向缩放（Y轴缩放），但它们具有相同的缩放中心点和基数，其中心点就是元素的中心位置，缩放基数为1，如果其值大于1元素就放大，反之其值小于1，元素缩小。
+            </div>
+        </a></li>
+        <li class="item scale-x"><a href="#">ScaleX</a></li>
+        <li class="item scale-y"><a href="#">ScaleY</a></li>
+        <li class="item skew"><a href="#">Skew
+            <div class="hidden ske">
+                扭曲skew和translate、scale一样同样具有三种情况：skew(x,y)使元素在水平和垂直方向同时扭曲（X轴和Y轴同时按一定的角度值进行扭曲变形）；skewX(x)仅使元素在水平方向扭曲变形（X轴扭曲变形）；skewY(y)仅使元素在垂直方向扭曲变形（Y轴扭曲变形），具体使用如下：著作权归作者所有。
+            </div>
+        </a></li>
+        <li class="item skew-x"><a href="#">SkewX</a></li>
+        <li class="item skew-y"><a href="#">SkewY</a></li>
+        <li class="item matrix"><a href="#">Matrix</a></li>
+    </ul>
+</div>
+
+<!--<p> 下面这个例子是transform多个属性</p>-->
+<!--<div class="demo"><a href=#></a></div>-->
+</body>
+</html>

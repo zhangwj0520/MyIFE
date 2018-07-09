@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo1 {
+            width: 200px;
+            height: 200px;
+            margin-left: 300px;
+            background: blue;
+            -webkit-animation-name:wobble;/*动画属性名，也就是我们前面keyframes定义的动画名*/
+            -webkit-animation-duration: 10s;/*动画持续时间*/
+            -webkit-animation-timing-function: steps(1)/*linear*/; /*动画频率，和transition-timing-function是一样的*/
+            -webkit-animation-delay: 2s;/*动画延迟时间*/
+            -webkit-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+            -webkit-animation-direction: alternate;/*定义动画方式*/
+        }
+        @-webkit-keyframes wobble{
+            0% {
+                margin-left: 300px;
+                background: green;
+            }
+            20% {
+                margin-left: 400px;
+                background: #c9d163;
+            }
+            40% {
+                margin-left: 500px;
+                background: #d16664;
+            }
+            60% {
+                margin-left: 600px;
+                background: #d162bc;
+            }
+            80% {
+                margin-left: 700px;
+                background: #6e54d1;
+            }
+            100% {
+                margin-left: 800px;
+                background: red;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="demo1"></div>
+</body>
+</html>
